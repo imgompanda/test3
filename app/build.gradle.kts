@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.mydeviceinfo"
+    namespace = "com.example.sloppyweather"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.mydeviceinfo"
+        applicationId = "com.example.sloppyweather"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -51,14 +51,11 @@ android {
 
 dependencies {
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation("androidx.cardview:cardview:1.0.0")
 
     // Lifecycle components (ViewModel and LiveData)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.androidx.activity.ktx) // For viewModels delegate
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
 
     val composeBom = platform(libs.androidx.compose.bom)
     implementation(composeBom)
@@ -69,8 +66,6 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-    implementation(libs.androidx.navigation.compose)
-    implementation(libs.androidx.compose.material.icons.extended)
 
     debugImplementation(libs.androidx.compose.ui.tooling)
 
