@@ -11,7 +11,13 @@ material = "1.10.0"
 composeBom = "2024.06.00" # Use the latest stable BOM version
 activityCompose = "1.9.0"
 navigationCompose = "2.7.7"
+lifecycle = "2.8.3"
+activityKtx = "1.9.0"
 # composeCompiler = "1.5.1" # Compiler version is often set in build.gradle.kts directly
+# Testing versions
+mockitoCore = "5.12.0"
+mockitoKotlin = "5.4.0"
+archCoreTesting = "2.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -43,6 +49,17 @@ androidx-compose-material-icons-extended = { module = "androidx.compose.material
 androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 androidx-compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
 androidx-compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
+
+# Lifecycle Components
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
+androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
+
+# Testing Libraries
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCore" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin" }
+# mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockitoCore" } # Removed/Commented out
+androidx-arch-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "archCoreTesting" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

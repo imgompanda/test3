@@ -1,16 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.Test2" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+    <!-- Base application theme for night mode (force dark). -->
+    <style name="Theme.MyDeviceInfo" parent="Theme.Material3.Dark.NoActionBar"> 
+        <!-- Customize your dark theme here. -->
+        <item name="colorPrimary">@color/blue_200</item>
         <item name="colorOnPrimary">@color/black</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondary">@color/blue_gray_200</item>
         <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <!-- Background color -->
+        <item name="android:colorBackground">@color/black</item>
+        <item name="colorSurface">@color/dark_gray</item> 
+        <item name="colorOnBackground">@color/white</item>
+        <item name="colorOnSurface">@color/white</item>
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">@color/black</item>
     </style>
 </resources>
